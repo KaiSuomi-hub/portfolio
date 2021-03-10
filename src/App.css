@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
-}
+@media screen and (min-width: 320px) and (max-width: 1080px) {
+  #face {
+    width: 100px;
+    height: 100px;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  body {
+    margin-top: 35%;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  #link {
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    background: #3b0f6434;
   }
 }
+@media screen and (min-width: 1080px) and (max-width: 5480px) {
+  #face {
+    height: 250px;
+    width: 250px;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  body {
+    margin-top: 15%;
+  }
+}
+#face {
+  border-radius: 50%;
+  margin: 12px;
+  filter: url("#duotone_peachypink") blur(1px);
+  background: url("./face.jpg");
+  background-size: 100%;
+  /*###Tablet(medium)###*/
+}
+#face:hover {
+  animation: facein 0.5s;
+  filter: none;
+  box-shadow: 4px 4px 5px 1px rgba(95, 48, 149, 0.2);
+  background-image: url("./face.jpg"), url("./shine.png");
+  background-blend-mode: screen;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes facein {
   from {
-    transform: rotate(0deg);
+    filter: blur(5px);
   }
   to {
-    transform: rotate(360deg);
+    filter: blur(0px);
+    filter: none;
+    box-shadow: 4px 4px 5px 1px rgba(95, 48, 149, 0.2);
   }
+}
+.svg-filters {
+  height: 0;
+  left: -9999em;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 0;
+}
+
+#Rigth {
+  background-color: #68686863;
+  border: solid 1mm #000000;
+  border-radius: 10px;
+  margin-bottom: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  font-family: Montserrat, sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+ul {
+  background: darkorange;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  color: #fff;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+li a {
+  color: #fff;
+}
+li:hover {
+  cursor: pointer;
+}
+li:focus-within {
+  cursor: pointer;
+}
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  background: orange;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+  animation: fadein 0.5s;
+  text-align: center;
+}
+ul li:hover > ul, ul li:focus-within > ul {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+ul li ul:hover, ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+ul li ul li {
+  clear: both;
+  width: 100%;
 }
