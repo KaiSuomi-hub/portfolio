@@ -1,0 +1,24 @@
+portfolio todo
+
+***TODO***
+
+
+dynaaminen lataaminen vasta siinä vaiheessa kun selaa alas?
+
+xs previewt sivuista joita tehnyt
+
+käytä fontawesome ikoneja
+
+//* tämä viimeksi 
+keksi joku backend
+tämä viimeksi *//
+
+
+***DONE***
+
+svg tausta-animaatio/värit
+gradient #6a4084 to #85457b
+bootstrap
+div, seethrough overlay
+scroll to CV-pdf & About me?
+Toteutus-react
