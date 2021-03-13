@@ -1,21 +1,51 @@
 import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf';
-import PDF from './cv-antti-english-2021.pdf';
-function Cv() {
-    const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
+  const options = {
+  cMapUrl: 'cmaps/',
+  cMapPacked: true,
+};
+
+export default function Sample() {
+  const [file, setFile] = useState('./cv-antti-english-2021.pdf');
+  const [numPages, setNumPages] = useState(null);
+
+  function onFileChange(event) {
+    setFile(event.target.files[0]);
   }
-    return (
-            <div className="me">
-            <Document
-        file="cv-antti-english-2021.pdf"
-        onLoadSuccess={onDocumentLoadSuccess}/>
-            <a href='./cv-antti-english-2021.pdf' download>My CV</a>
-            <div class="pdf"> </div>
-            </div>
-    );
+
+  function onDocumentLoadSuccess({ numPages: nextNumPages }) {
+    setNumPages(nextNumPages);
+  }
+
+  return (
+    <div className="Example">
+      <div className="Example__container">
+        <div className="Example__container__load">
+         
+          
+        </div>
+        <div className="Example__container__document">
+          <Document
+            file={file}
+            onLoadSuccess={onDocumentLoadSuccess}
+            options={options}
+          >
+            {
+              Array.from(
+                new Array(numPages),
+                (el, index) => (
+                  <Page
+                    key={`page_${index + 1}`}
+                    pageNumber={index + 1}
+                  />
+                ),
+              )
+            }
+          </Document>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default Cv;
