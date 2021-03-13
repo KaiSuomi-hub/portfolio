@@ -1,12 +1,22 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "Portfolio",
+  "version": "0.5.0",
   "private": true,
   "homepage": ".",
+  "description": "Portfolio for Antti Suomi",
+  "keywords": [
+    "React",
+    "Portfolio",
+    "Antti",
+    "Suomi",
+    "Web developer",
+    "Css"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@microlink/react": "^5.5.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -15,7 +25,9 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.0",
     "react-dom": "^17.0.1",
+    "react-pdf": "^5.2.0",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

@@ -1,12 +1,14 @@
 @import "../node_modules/bootstrap/scss/bootstrap"
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap')
 body
   background: linear-gradient(90deg, #d8a2ff, #ff88eb,  #859cff)
   background-size: 1000% 
   -webkit-animation: BG 50s ease infinite
   -moz-animation: BG 50s ease infinite
   animation: BG 50s ease infinite
-  scroll-behavior: smooth
+html
+  scroll-behavior: smooth !important
+  overflow: hidden
 
 .App
   animation: fadein 1s

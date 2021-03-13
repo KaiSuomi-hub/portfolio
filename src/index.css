@@ -5,7 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -48,7 +48,6 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  scroll-behavior: smooth;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -9936,7 +9935,11 @@ body {
   -webkit-animation: BG 50s ease infinite;
   -moz-animation: BG 50s ease infinite;
   animation: BG 50s ease infinite;
-  
+}
+
+html {
+  scroll-behavior: smooth !important;
+  overflow: hidden;
 }
 
 .App {

@@ -1,4 +1,3 @@
-import face from './face.jpg';
 import React from 'react';
 
 class Face extends React.Component {
