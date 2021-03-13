@@ -5,6 +5,7 @@ import Content from './Content';
 import Navi from './Navi';
 import Link from './Link';
 import Cv from "./Cv";
+import { Container,Row,Col } from 'react-bootstrap/';
 function App() {
   return (
     <div className="App">
@@ -35,7 +36,13 @@ function App() {
             Para={<text >
               <h3>This is my CV</h3>
               <p></p>
-              <Cv/>
+              <Container fluid>
+                <Row className="justify-content-lg-center">
+                <Col sm={7} >
+                <a href='./cv-antti-english-2021.pdf' download><Cv /></a>
+                  </Col>
+                  </Row>
+              </Container>              
             </text>
             }
         />

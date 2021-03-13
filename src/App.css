@@ -14,7 +14,17 @@
     background: #3b0f6434;
   }
 }
-@media screen and (min-width: 1080px) and (max-width: 5480px) {
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.react-pdf__Page__canvas {
+  width: 300px !important;
+  height: auto !important;
+}
+
+@media screen and (min-width: 1080px) and (max-width: 2160px) {
   #face {
     height: 250px;
     width: 250px;
@@ -24,6 +34,16 @@
     margin-top: 15%;
   }
 }
+.react-pdf__Page__canvas {
+  width: 600px !important;
+  height: auto !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 #face {
   border-radius: 50%;
   margin: 12px;

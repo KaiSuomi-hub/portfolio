@@ -20,13 +20,13 @@ export default function Sample() {
   }
 
   return (
-    <div className="Example">
-      <div className="Example__container">
-        <div className="Example__container__load">
+    <div className="PDF">
+      <div className="PDF__container">
+        <div className="PDF__container__load">
          
           
         </div>
-        <div className="Example__container__document">
+        <div className="PDF__container__document">
           <Document
             file={file}
             onLoadSuccess={onDocumentLoadSuccess}
