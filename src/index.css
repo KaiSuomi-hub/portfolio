@@ -9939,7 +9939,6 @@ body {
 
 html {
   scroll-behavior: smooth !important;
-  overflow: hidden;
 }
 
 .App {

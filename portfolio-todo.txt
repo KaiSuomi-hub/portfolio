@@ -5,7 +5,12 @@ portfolio todo
 
 dynaaminen lataaminen vasta siinä vaiheessa kun selaa alas?
 
-xs previewt sivuista joita tehnyt
+//* kaipaa vielä brickin, gridin tai bootstrapin
+xs previewt sivuista joita tehnyt 
+EDIT: grid tehty, tee vielä responsiivinen
+*//
+
+
 
 käytä fontawesome ikoneja
 
@@ -22,3 +27,4 @@ bootstrap
 div, seethrough overlay
 scroll to CV-pdf & About me?
 Toteutus-react
+CV-pdf

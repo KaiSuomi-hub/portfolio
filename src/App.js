@@ -3,7 +3,7 @@ import 'jquery';
 import '@popperjs/core'; 
 import Content from './Content';
 import Navi from './Navi';
-import Link from './Link';
+import Url from './Url';
 import Cv from "./Cv";
 import { Container,Row,Col } from 'react-bootstrap/';
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Content
             Para={<text >
               <h3>Here's some stuff I've made</h3>
-              <div><Link/></div>
+              <div><Url/></div>
             </text>
             }
           />
